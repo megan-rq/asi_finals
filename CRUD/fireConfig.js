@@ -1,6 +1,6 @@
 // Aquino, Bea Nichole T. - Dizon, Maycee G. - Quizon, Megan Rae L.
 // CS - 401     6ASI    Activity
-// September 30, 2021
+// November 11 2021
 
 var firebaseConfig = {
 	apiKey: "AIzaSyB3-k0zYdMg77-N-vvIS4EKpgQVHC7ZXqQ",
