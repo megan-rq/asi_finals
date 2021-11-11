@@ -1,0 +1,89 @@
+<!-- // Aquino, Bea Nichole T. - Dizon, Maycee G. - Quizon, Megan Rae L.
+// CS - 401     6ASI    Activity
+// September 30, 2021 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Register</title>  <!-- CORE CSS-->		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+			html {
+				display: table;
+				margin: auto;
+			}
+			body {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.margin {
+			margin: 0 !important;
+			}
+		</style>
+	
+	</head>
+	<h1 style="color:white"> 📚 Library Book Log 📖 </h1>
+	<body class="brown">
+	<div id="login-page" class="row">
+		<div class="col s12 z-depth-6 card-panel">
+
+		<div class="login-form login-div">
+			<div class="row">
+				<div class="input-field col s12 center">
+					<p class="center  login-form-text" style="font-weight: 300;">Register your account to the system with your e-mail address.</p>
+				</div>
+			</div>
+			<div class="row margin">
+				<div class="input-field col s12">
+					<i class="mdi-communication-email prefix" style="color: brown;"></i>
+					<input id="email_field" type="email" class="validate">
+				</div>
+			</div>
+			<div class="row margin">
+				<div class="input-field col s12">
+					<i class="mdi-action-lock-outline prefix" style="color: brown;"></i>
+					<input id="password_field" type="password" class="validate">
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<button class="btn waves-effect brown waves-light col s12" onclick="createAccount()">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+				apiKey: "AIzaSyB3-k0zYdMg77-N-vvIS4EKpgQVHC7ZXqQ",
+  authDomain: "asimidterm-6fb2f.firebaseapp.com",
+  databaseURL: "https://asimidterm-6fb2f-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "asimidterm-6fb2f",
+  storageBucket: "asimidterm-6fb2f.appspot.com",
+  messagingSenderId: "533845716409",
+  appId: "1:533845716409:web:df139407f9617611ecda68",
+  measurementId: "G-YCC1RRWRT0"
+    };
+            firebase.initializeApp(config);
+			function createAccount(){
+				var userEmail = document.getElementById("email_field").value;
+				var userPass = document.getElementById("password_field").value;
+				firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch((error) =>{
+					var errorCode = error.code
+					var errorMessage = error.message				
+				}).then(() => {
+                	window.location.assign("/login");
+            	});
+			}
+        </script>
+    <script src="main.js"></script>
+	</body>
+</html>

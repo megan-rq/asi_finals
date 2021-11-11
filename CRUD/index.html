@@ -1,0 +1,47 @@
+<!-- // Aquino, Bea Nichole T. - Dizon, Maycee G. - Quizon, Megan Rae L.
+// CS - 401     6ASI    Activity
+// September 30, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD with Firebase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>📚 Library Book Log 📖</h2>
+      <hr />
+      <br />
+      <div class="form">
+        SBN: <input type="text" name="sbn" id="sbn" /> <br /><br />
+        Title:&nbsp; <input type="text" name="title" id="title" /> <br /><br />
+        Author: <input type="text" name="author" id="author" /> <br /><br />
+        Note: <input type="text" name="status" id="status" /> <br /><br />
+      </div>
+
+      <div class="buttons">
+        <button id="insert">Add</button>
+        <button id="read">Search</button>
+        <button id="update">Update</button>
+        <button id="delete">Remove</button>
+      </div>
+      <label>   
+        Availability :  
+        </label><br>  
+        <input type="checkbox" name="borrowed"/>Borrowed   
+        <input type="checkbox" name="available"/>Available
+        
+        <br>  
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+    <script src="./fireConfig.js"></script>
+
+    <script src="./myscript.js"></script>
+  </body>
+</html>
