@@ -70,6 +70,8 @@ document.getElementById("delete").onclick = function () {
     .database()
     .ref("book/" + _sbn)
     .remove();
+  
+  // notify data deletion
   alert("Data Deleted");
   document.getElementById("sbn").value = "";
   document.getElementById("title").value = "";
